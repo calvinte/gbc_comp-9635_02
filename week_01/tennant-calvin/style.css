@@ -1,0 +1,8 @@
+.main.container {
+	padding: 50px 0;
+}
+.profile-pic img {
+	border-radius: 100%;
+	width: 100%;
+}
+
