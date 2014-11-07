@@ -1,0 +1,139 @@
+body {
+	font-family: 'Arimo', sans-serif;
+}
+
+
+/**************  main  **************/
+/**************  main  **************/
+#main_page {
+	background: url(sam&ball.jpg) no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#wrapper {
+	margin-top: 100px;
+	border: solid black 1px;
+	overflow: auto;
+	width: 90%;
+	margin-right: 5%;
+	margin-left: 5%;
+	background-color: snow;
+	opacity: 0.8;
+}
+
+ul {
+	font-size: 1.2em;
+	line-height: 1.5em;
+}
+
+.main {
+	padding: 1.5%;
+	width: 55%;
+	margin: auto;
+	float: left;
+}
+
+.secondary {
+	padding: 1.5%;
+	width: 38%;
+	float: left;
+}
+
+h1, h2 {
+	font-family: 'Pacifico', cursive;
+	margin-left: 5%;
+}
+
+h1 {
+	font-size: 3em;
+}
+
+h2 {
+	font-size: 1.8em;
+}
+
+.para {
+font-size: 1.3em;
+margin-right: 5%;
+margin-left: 5%;
+}
+
+#links a{
+	text-decoration: none;
+	color: chocolate;
+}
+
+#links a:hover {
+	color: orange;
+}
+
+#dancer {
+	width: 90%;
+	border: solid black 2px;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+/**************  nav  **************/
+/**************  nav  **************/
+#main_nav {
+	overflow: hidden;
+	font-size: 1em;
+	min-width: 20px;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+
+#main_nav li{
+	display: inline;
+	float: right;
+	margin-left: 35px;
+}
+
+.main_link {
+	color: lightgrey;
+	text-decoration: none;
+}
+
+.main_link:hover {
+	color: orange;
+}
+
+.home a.home{
+	color: orange;
+}
+
+.contact a.contact{
+	color: orange;
+}
+
+.assignments a.assignments {
+	color: orange;
+}
+
+.syllabus a.syllabus {
+	color: orange;
+}
+
+/**************  photo page  **************/
+/**************  photo page  **************/
+
+#legs {
+	width: 50%;
+	border: 5px dashed chocolate;
+	margin-right: 24%;
+	margin-left: 24%;
+	margin-bottom: 2%;
+}
+
+/**************  footer  **************/
+/**************  footer  **************/
+
+footer {
+	background: snow;
+
+}
