@@ -51,7 +51,7 @@ li {
   height: 30px;
   display: inline-block;
   border: solid 3px #ffffff;
-  border-radius: 10px 0px 0px 0px;
+  border-radius: 0px 0px 0px 0px;
   padding: 10 0 0 0;
   margin: 0 10 0 10;
 
@@ -122,14 +122,6 @@ font-family: Georgia;
 }
 
 
-
-#empty{
-  clear: both; 
-  width: 960px;
-  height: 40px;
-  display: block;
-}
-
 a:link {
   position: relative;
   top: -10px;
@@ -139,7 +131,7 @@ a:link {
   height: 30px;
   display: inline-block;
   text-decoration: none;
-  border-radius: 10px 0px 0px 0px;
+  border-radius: 0px 0px 0px 0px;
   padding: 10 0 0 0;
   transition: all 0.5s;
 }
@@ -154,7 +146,7 @@ a:hover {
   text-decoration: none;
   color: #000;
   opacity: 1;
-  border-radius: 10px 0px 0px 0px;
+  border-radius: 0px 0px 0px 0px;
   transition: all 0.2s;
 }
 
@@ -202,17 +194,9 @@ a:active {
   width: 100%;
 }
 
-.blue {
-  color: #1000dd;
-}
-
 .white {
   color: #ffffff;
-}
 
-.red {
-  color: #B00000;
-}
 
 h1 {
   font-family: arial;
@@ -231,8 +215,6 @@ h2 {
   margin: 0;
   padding: 0;
 }
-
-
 
 p {
   margin: 0px;
