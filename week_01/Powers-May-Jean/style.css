@@ -1,0 +1,25 @@
+body{
+	background-color: #999;
+	width: auto;
+}
+#main-container{
+	width: 960px;
+	height: auto;
+	background-color: #FFF;
+	margin:auto;
+}
+h1{
+	text-align:center;
+}
+h2{
+	text-align:center;
+}
+p{
+	margin:0px 100px 20px 100px;
+	text-align: justify;
+}
+#photo{
+	background-image: url("images/mj.jpg");
+	width:auto;
+	height:auto;
+}
