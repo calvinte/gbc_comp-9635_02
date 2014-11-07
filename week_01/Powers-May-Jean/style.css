@@ -1,6 +1,7 @@
 body{
 	background-color: #999;
 	width: auto;
+	margin:0;
 }
 #main-container{
 	width: 960px;
@@ -10,16 +11,97 @@ body{
 }
 h1{
 	text-align:center;
+	font-family: 'Dawning of a New Day', cursive;
+	font-size: 72px;
+	color:tomato;
 }
 h2{
 	text-align:center;
+	font-family: 'Raleway', sans-serif;
+}
+#main-container > h2{
+	background-color: tomato;
+	color:#FFF;
+	width:800px;
+	height:30px;
+	border-radius:15px;
+	margin:0px 80px;
 }
 p{
-	margin:0px 100px 20px 100px;
+	margin:0px 100px 50px 100px;
 	text-align: justify;
+	font-family: 'Raleway', sans-serif;
+	font-size:18px;
+	line-height: 30px;
+}
+.subhead{
+	text-align: left;
+	font-family: 'Dawning of a New Day', cursive;
+	font-size:48px;
+	line-height: 60px;
+	color:red;
+	margin-top:50px;
 }
 #photo{
 	background-image: url("images/mj.jpg");
-	width:auto;
-	height:auto;
+	width:160px;
+	height:160px;
+	margin:50px 400px;
+}
+.webpage{
+	background-image: url("images/sw-web.png");
+	width:800px;
+	height:457px;
+	margin: 0px 80px;
+}
+#photo-container{
+	width:960px;
+	height:112px;
+	background-color:#FFF;
+	margin:20px 0px;
+	padding-bottom:50px;
+}
+
+#photo-container .photo1{
+	width:190px;
+	height:112px;
+	background-image: url("images/ajax1.jpg");
+	float:left;
+	margin-right:2.5px;
+}
+#photo-container .photo2{
+	width:190px;
+	height:112px;
+	background-image: url("images/ajax2.jpg");
+	float:left;
+	margin-right:2.5px;
+}
+#photo-container .photo3{
+	width:190px;
+	height:112px;
+	background-image: url("images/ajax3.jpg");
+	float:left;
+	margin-right:2.5px;
+}
+#photo-container .photo4{
+	width:190px;
+	height:112px;
+	background-image: url("images/ajax4.jpg");
+	float:left;
+	margin-right:2.5px;
+}
+#photo-container .photo5{
+	width:190px;
+	height:112px;
+	background-image: url("images/ajax5.jpg");
+	float:left;
+	margin-right:0px;
+}
+footer{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 12px;
+    text-align: center;
+    padding: 20px;
+    display: block;
+    clear:both;
 }
