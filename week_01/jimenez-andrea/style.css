@@ -1,0 +1,34 @@
+body{
+font-family: 'Open Sans', sans-serif;
+overflow:hidden;
+ background-image: url("stripes.png");
+background-repeat: repeat xy;
+/* background-color: #cccccc;}*/
+}
+
+
+#containter{
+width:60%;
+margin-right: auto;
+margin-left:auto;
+background-color: #cccccc;
+}
+
+h1{
+background-color:#e5e5e5;
+padding:50px;
+
+
+}
+
+#left{
+float:left;
+width:50%;
+}
+
+#right{
+	width:50%;
+float:left;
+
+
+} 
