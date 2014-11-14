@@ -5,7 +5,7 @@ $.ajax({
 	success: function(response) {
 		console.log(response);
 		for (var i = 0; i < response.data.length; i++) {
-			$('body').append(
+			$('#wrapper').append(
 				'<div class="insta">'
 				+ '<img src="' 
 				+ response.data[i].images.standard_resolution.url 
