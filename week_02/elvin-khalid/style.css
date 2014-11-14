@@ -1,0 +1,36 @@
+#photo-background{
+	background-color: tan;
+	width: 1000px;
+	margin: auto;
+	overflow: hidden;
+	border: dotted 6px #ffffff;
+}
+h1{
+	background-color: #E0D1C2;
+	font-size: 35px;
+	display: inline-block;
+	margin: 10px 0 20px 234px;
+	padding: 30px;
+	font-family: sans-serif;
+	color: #ffffff;
+	border-radius: 10px;
+}
+.photo-box{
+	width: 44%;
+	float: left;
+	padding-left: 6%;
+	padding-top: 2%;
+}
+.photo-box:nth-last-of-type(2), .photo-box:last-of-type{
+	margin-bottom: 2%;
+}
+.photo-box img{
+	width: 75%;
+	border: solid 2px #ffffff;
+}
+footer{
+	text-align: center;
+	color: #996633;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
