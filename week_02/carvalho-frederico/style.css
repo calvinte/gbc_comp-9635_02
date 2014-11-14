@@ -1,0 +1,23 @@
+.insta-photo{
+    border: 1px solid #000000;
+	width: 150px;
+	float: left;
+	margin: 10px 10px 10px 10px;
+
+}
+
+h1 {
+	font-family: Arial;
+	font-size: 40px;
+	color: #E60000;
+	text-align: center;
+}
+
+h2 {
+	font-family: Arial;
+	font-size: 20px;
+	color: #000000;
+	text-align: center;
+
+}
+
