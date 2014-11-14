@@ -1,0 +1,24 @@
+body {
+	width: 1040px;
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+	background-color: #B2B2B2;
+}
+div {
+	display:inline;
+}
+.photo {
+	width: 300px;
+	margin: 4px;
+	border: 1px solid black;
+}
+img{
+	transition: width 0.5s ease;
+	opacity: .7;
+}
+img:hover {
+	width:400px;
+	border: 2px solid gray;
+	opacity: 1;
+}
