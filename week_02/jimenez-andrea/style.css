@@ -1,0 +1,28 @@
+body{
+margin-left:auto;
+margin-right: auto;
+text-align: center;
+}
+
+
+h1{
+color:#c52033;
+font-family: 'Amatic SC', cursive;
+font-size: 55px;
+}
+
+.instaphoto{
+width: 200px;
+margin-top:60px;
+margin-left: 20px;
+}
+
+.instagram-box{
+display:inline;	
+width:100%;
+
+}
+
+.instaphoto:hover{
+trasition: 1.4s;
+}
