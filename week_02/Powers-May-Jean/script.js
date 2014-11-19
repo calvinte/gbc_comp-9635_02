@@ -10,7 +10,13 @@ $.ajax({
 			  '<div>'
 			+ '<img class="insta-photo" src="'
 			+ response.data[i].images.standard_resolution.url
-//			+ $('body')append.text('response.data[i].caption.text') + '</body>'
+			+ '">'
+			+ '</div>'
+
+			$('p').append(
+			  '<div>'
+			+ '<img class="insta-photo" src="'
+			+ response.data[i].caption.text'
 			+ '">'
 			+ '</div>'
 			);	
