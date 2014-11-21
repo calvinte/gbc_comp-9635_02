@@ -1,4 +1,4 @@
-var userId = 232192182;
+var userId = 295980048;
 var nextUrl = 'https://api.instagram.com/v1/users/' + userId + '/media/recent?client_id=585d00be2af34a26b0e1caa6995cf19f';
 var loading = false;
 
@@ -18,8 +18,12 @@ console.log(response);
 nextUrl = response.pagination.next_url;
 for (var i = 0; i < response.data.length; i++) {
 	var src=response.data[i].images.thumbnail.url;
-	$('#insta-photos').append('<img src="' + src + '">');
+	var orig=response.data[i].link;
+	var title=response.data[i].caption.text;
+	var filter=response.data[i].filter;
+	$('#insta-photos').append('<a href="' + orig + '"><img class="insta-pic" title="' + title + '" src="' + src + '"></a>');
 	}
+	/*$('#filters').append('<p>' + filter + '</p>')*/
 	loading = false;
 }
 
