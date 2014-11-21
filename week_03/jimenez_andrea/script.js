@@ -1,5 +1,10 @@
 
-var user_id = 232192182; //user id of instagram profile you are using - you can find this in the console
+
+
+
+// var user_id = 25813183; 
+var user_id = 182192760;//user id of instagram profile you are using - you can find this in the console
+
 var next_url = 'https://api.instagram.com/v1/users/' + user_id + '/media/recent?client_id=585d00be2af34a26b0e1caa6995cf19f';
 var loading = false; // how to load only once if clicking multiple times - this means we're not loading 
 
@@ -37,7 +42,20 @@ $(document).ready(function(){
 		getNextPage();	// call this a second time, third, etc.
 	});
 
+
+//additions
+// $('#insta-photos img').click(function(){
+
+// 	var x = $(this).index();
+
+// 	$(this).eq(x).hide();
+// });	
+//end of addition
+
+
 });
+
+
 
 
 //scrolling event
@@ -57,3 +75,7 @@ $(window).scroll(function(scrollEvent){
 	// console.log($('#insta-photos').height());
 
 });
+
+
+
+
