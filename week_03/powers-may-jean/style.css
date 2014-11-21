@@ -1,6 +1,40 @@
 html, body {
-	margin: 0;
+	margin: auto;
 	min-height: 100%;
 	padding: 0;
-	width: 0;
+	width: 960px;
+	background-color: black;
+}
+#title{
+	background-image: url("breaking-bad-logo.jpg");
+	width:960px;
+	height:540px;
+}
+#insta-photos{
+	width: 960px;
+	margin-left: auto;
+	margin-right:auto;
+}
+
+#insta-photos img{
+	margin:30px;
+	border-color: #006400;
+	border-width: 4px;
+	border-style: solid;
+}
+
+#insta-photos img:hover{
+	transition: all .2s ease-in-out;
+	transform: scale(1.5);
+}
+#next-page{
+	width:90px;
+	height:20px;
+	margin: 0px 450px;
+	background-color: green;
+	border-radius: 10px;
+	color:#FFF;
+}
+#next-page:hover{
+	background-color:lightgreen;
 }

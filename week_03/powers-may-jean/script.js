@@ -1,4 +1,5 @@
-var user_id=232192182; //The Rock's ID
+//var user_id=232192182; //The Rock's ID
+var user_id=212411488; //Breaking Bad's ID
 var next_url = 'https://api.instagram.com/v1/users/' + user_id + '/media/recent?client_id=585d00be2af34a26b0e1caa6995cf19f'; //Calvin's User ID (this should me mine)
 var loading = false;
 
