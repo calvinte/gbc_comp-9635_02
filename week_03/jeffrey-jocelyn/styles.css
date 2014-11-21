@@ -4,3 +4,66 @@ html, body {
 	padding:0;
 	width:100%;
 }
+
+body {
+	width:70%;
+	margin-right: 15%;
+	margin-left: 15%;
+}
+
+#insta_photos {
+	overflow: auto;
+	width: 800px;
+	position: relative;
+}
+
+img {
+	margin: 15px 30px;
+	border-radius: 40px;
+	border: solid black 3px;
+}
+
+img:hover{
+	width: 160px;
+	height: 160px;
+	-webkit-box-shadow: 3px -1px 46px 24px rgba(255,239,189,1);
+	-moz-box-shadow: 3px -1px 46px 24px rgba(255,239,189,1);
+	box-shadow: 3px -1px 46px 24px rgba(255,239,189,1);
+}
+
+#next-page {
+	color: black;
+	font-family: 'Inconsolata';
+	font-size: 1.3em; 
+	background-color: snow;
+	border: solid 1px lightgrey;
+	height: 50px;
+	width: 200px;
+	border-radius: 5px;
+	margin-left: 15px;
+}
+
+
+#next-page:hover{
+	border: 2px dashed lightgrey;
+	font-weight: bolder;
+}
+
+#last-week {
+	border:none;
+	box-shadow: none;
+}
+
+#last-week:hover {
+	width: 574px;
+	height:340px;
+}
+
+
+html { 
+  background: url(john-oliver3.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
