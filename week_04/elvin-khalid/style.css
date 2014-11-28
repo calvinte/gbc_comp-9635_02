@@ -1,0 +1,59 @@
+body{
+	background-color: #657995;
+	font-family: sans-serif;
+	overflow: hidden;
+}
+#map{
+	width: 1024px;
+	height: 900px;
+	overflow: hidden;
+	margin: 10px auto 0 auto;
+	background: url("vintage-scroll.png")  no-repeat fixed center;
+	background-size: cover;
+	position: relative;
+}
+#content{
+	width: 618px;
+	height: 550px;
+	position: absolute;
+	left: 230px;
+	top: 182px;
+	overflow: auto;
+	padding: 5px;
+}
+#content img{
+	width: 100%;
+}
+#content h1{
+	color: white;
+}
+#content p{
+	width: 98%;
+	color: white;
+	padding: 5px;
+}
+#map-canvas{
+	width: 400px;
+	height: 300px;
+	margin: auto;
+}
+::-webkit-scrollbar {
+    height: 12px;
+    width: 12px;
+    background: #523103;
+}
+::-webkit-scrollbar-thumb {
+    background: tan;
+    -webkit-border-radius: 1ex;
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+::-webkit-scrollbar-corner {
+    background: #000;
+}
+footer{
+	text-align: center;
+	color: tan;
+	position: absolute;
+	bottom: 54px;
+	left: 338px;
+}
