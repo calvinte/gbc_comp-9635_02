@@ -1,0 +1,46 @@
+body {
+	max-width: 1350px;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+h1 {
+	font-family: 'Inconsolata' ;
+	font-size: 5em;
+	margin: auto;
+	max-width: 800px;
+	margin:auto;
+}
+
+h2 {
+	font-family: 'Dancing Script', cursive;
+	font-size: 3em;
+}
+
+h1, h2 {
+	max-width: 800px;
+	margin:auto;
+	text-align: center;
+	color:black;
+	background-color: white;
+}
+
+.insta {
+	float: left;
+}
+
+img {
+	margin: 20px;
+	width: 200px;
+	height: 200px;
+}
+
+img:hover{
+	box-shadow: 2px 4px 17px 17px rgba(231,166,26,1);
+}
+
+#wrapper {
+	width: 1350px;
+	margin-left: 200px;
+	margin-right: 200px;
+}
