@@ -1,0 +1,55 @@
+html{
+	background-image: url(SKS-Plaid03.png); /*http://graphicssoft.about.com/od/freedownloads/ig/SKS-Plaid-Patterns/*/
+}
+#map-canvas {
+	width: 600px;
+	height: 300px;
+	margin:auto;
+}
+
+h1{
+	font-family: 'Rock Salt', cursive;
+	text-align: center;
+	font-size: 48px;
+	color: #000080;
+	line-height:66px;	
+}
+#logo{
+	background-image: url("portly-piper-logo.png");
+	width:180px;
+	height:155px;
+	margin:auto;
+	margin-top:25px;
+}
+#interior{
+	background-image: url("pub-interior.jpg");
+	width:800px;
+	height:600px;
+	margin:auto;
+}
+#content-container{
+	width:960px;
+	height:auto;
+	background-color: rgba(255,255,255,0.6);
+	margin:auto;
+	padding:20px 0px;
+}
+#bio h2{
+	font-family: 'Rock Salt', cursive;
+	text-align: left;
+	font-size: 30px;
+	color: lightgreen;
+	width:200px;
+	height:150%;
+	background-color: darkgreen;
+	border-radius: 0px 50px 50px 0px;
+	padding:10px 0px 10px 50px;
+}
+#bio p{
+	font-family: 'PT Serif', serif;
+	text-align: center;
+	font-size: 24px;
+	color: #000;
+	margin:20px 80px;
+	text-align: justify;	
+}
