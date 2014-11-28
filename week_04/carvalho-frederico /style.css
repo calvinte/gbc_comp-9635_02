@@ -1,0 +1,32 @@
+body {
+	background: #dddddd;
+}
+
+h1 {padding-top: 30px;
+	font-family: Arial;
+	text-align: center;
+	color: #FF3300;
+}
+
+#wrapall {margin-left: auto;
+	margin-right: auto;
+	width: 600px;
+	height: 1250px;
+	background: #ffffff;
+}
+
+#map-canvas {
+	margin-left: auto;
+	margin-right: auto;
+	width: 500px;
+	height: 500px;
+	box-shadow: 10px 10px 5px #888888;
+}
+
+#map1-canvas {
+	margin-left: auto;
+	margin-right: auto;
+	width: 500px;
+	height: 500px;
+	box-shadow: 10px 10px 5px #888888;
+}
