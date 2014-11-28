@@ -1,0 +1,30 @@
+body {
+	background-image: url("pizza-tile.png");
+
+}
+.content {
+	width: 970px;
+	background-color: rgba(207, 207, 207, 0.86);
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+div.text {
+	width: 860px;
+	margin-left:auto;
+	margin-right:auto;
+}
+.map-canvas {
+	width: 400px;
+	height: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.planet{
+	position: absolute;
+	top: -300px;
+	left: 700px;
+	z-index:-1;
+}
