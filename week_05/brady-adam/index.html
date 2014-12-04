@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<title>Week 5 Google Maps</title>
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9rABaf_KBbLEY9UI2wiwiOZ8SeFoAZBE&sensor=false"></script>
+		<script>
+			$(document).ready(function() {
+				var torontopins = [
+					{
+						name: '<h2>Fort York</h2>',
+						description: '<p><b>Fort York</b> is a historic site of military fortifications and related buildings on the west side of downtown <a href="http://en.wikipedia.org/wiki/Toronto" title="Toronto">Toronto</a>, <a href="http://en.wikipedia.org/wiki/Ontario" title="Ontario">Ontario</a>, <a href="http://en.wikipedia.org/wiki/Canada" title="Canada">Canada</a>. The fort was built by the <a href="http://en.wikipedia.org/wiki/Kingdom_of_Great_Britain" title="Kingdom of Great Britain">British</a> <a href="http://en.wikipedia.org/wiki/British_Army" title="British Army">Army</a> and Canadian <a href="http://en.wikipedia.org/wiki/Militia" title="Militia">militia</a> troops in the late 18th and early 19th centuries, to defend the settlement and the new capital of the <a href="http://en.wikipedia.org/wiki/Upper_Canada" title="Upper Canada">Upper Canada</a> region from the threat of a military attack, principally from the newly independent <a href="http://en.wikipedia.org/wiki/United_States" title="United States">United States</a>. It was designated a <a href="http://en.wikipedia.org/wiki/National_Historic_Sites_of_Canada" title="National Historic Sites of Canada">National Historic Site of Canada</a> in 1923. The City of Toronto designated the site, along with the nearby <a href="http://en.wikipedia.org/wiki/Fort_York_Armoury" title="Fort York Armoury">Fort York Armoury</a>, as a <a href="http://en.wikipedia.org/wiki/Historic_district" title="Historic district">Heritage Conservation District</a> in 1985.</p>',
+						image: '<img height="100" src="http://upload.wikimedia.org/wikipedia/commons/4/4a/Fort_York_east_blockhouse_2.jpg">',
+						lat: '43.639064',
+						lng: '-79.396331',
+					},
+					{
+						name: '<h2>Elgin and Winter Garden Theatres</h2>',
+						description: '<p>The <b>Elgin and Winter Garden Theatres</b> are a pair of stacked <a href="http://en.wikipedia.org/wiki/Theater_(structure)" title="Theater (structure)" class="mw-redirect">theatres</a> in <a href="http://en.wikipedia.org/wiki/Toronto" title="Toronto">Toronto</a>, <a href="http://en.wikipedia.org/wiki/Ontario" title="Ontario">Ontario</a>, <a href="http://en.wikipedia.org/wiki/Canada" title="Canada">Canada</a>. The Winter Garden Theatre is seven storeys above the Elgin Theatre. They are the last surviving <a href="http://en.wikipedia.org/wiki/Edwardian_period" title="Edwardian period" class="mw-redirect">Edwardian</a> stacked theatres in the world. The pair were originally built as the flagship of <a href="http://en.wikipedia.org/wiki/Loews_Theatres" title="Loews Theatres" class="mw-redirect">Marcus Loew</a>s theatre chain in 1913. The building was designed by architect <a href="http://en.wikipedia.org/wiki/Thomas_W._Lamb" title="Thomas W. Lamb">Thomas W. Lamb</a>, who also built the <a href="http://en.wikipedia.org/wiki/Ed_Mirvish_Theatre" title="Ed Mirvish Theatre">Ed Mirvish Theatre</a>. Both theatres were built to show vaudeville acts and the short silent movies of the time. Each theatre was intended to compete in a different market.The gold-and-marble, domed, hard-top lower theatre, Loews Yonge Street Theatre, was home to continuous <a href="http://en.wikipedia.org/wiki/Vaudeville" title="Vaudeville">vaudeville</a> and movies. The upper-level Winter Garden is an atmospheric country garden under the stars. The upper theatre was built for the Big Time <a href="http://en.wikipedia.org/wiki/Vaudeville" title="Vaudeville">vaudeville</a> market and had reserved seats at premium prices, catering to the upper middle class. As well as competing in a different market, the upper theatre could be used for experimentation with acts, without the risk of closing the lower theatre.</p>',
+						image: '<img height="100" src="http://upload.wikimedia.org/wikipedia/commons/2/23/Elgin_Winter_Garden.jpg">',
+						lat: '43.653054',
+						lng: '-79.379337',
+					},
+					{
+						name: '<h2>George Brown House</h2>',
+						description: '<p><b>George Brown House</b> is a historic building in the <a href="http://en.wikipedia.org/wiki/Grange_Park_(neighbourhood)" title="Grange Park (neighbourhood)">Grange Park</a> neighbourhood of <a href="http://en.wikipedia.org/wiki/Toronto" title="Toronto">Toronto</a>, <a href="http://en.wikipedia.org/wiki/Ontario" title="Ontario">Ontario</a>, <a href="http://en.wikipedia.org/wiki/Canada" title="Canada">Canada</a>. It was home to <a href="http://en.wikipedia.org/wiki/Fathers_of_Confederation" title="Fathers of Confederation">Father of Confederation</a>, <a href="http://en.wikipedia.org/wiki/Reform_movement_(pre-Confederation_Canada)" title="Reform movement (pre-Confederation Canada)">Reform Party</a> politician and publisher <a href="http://en.wikipedia.org/wiki/George_Brown_(Canadian_politician)" title="George Brown (Canadian politician)">George Brown</a>. Its current address is 186 Beverley Street.</p>',
+						image: '<img height="100" src="http://upload.wikimedia.org/wikipedia/commons/9/92/Funeral_of_George_Brown_1880.jpg">',
+						lat: '43.655926',
+						lng: '-79.394915',
+					},
+					{
+						name: '<h2>Kensington Market</h2>',
+						description: '<p><b>Kensington Market</b> is a distinctive multicultural neighbourhood in <a href="http://en.wikipedia.org/wiki/Downtown_Toronto" title="Downtown Toronto">Downtown</a> <a href="http://en.wikipedia.org/wiki/Toronto" title="Toronto">Toronto</a>, <a href="/wiki/Ontario" title="Ontario">Ontario</a>, <a href="http://en.wikipedia.org/wiki/Canada" title="Canada">Canada</a>. <b>The Market</b> is an older neighbourhood and one of the citys most well-known. In November 2006, it was designated a <a href="http://en.wikipedia.org/wiki/National_Historic_Sites_of_Canada" title="National Historic Sites of Canada">National Historic Site of Canada</a>. <a href="http://en.wikipedia.org/wiki/Robert_Fulford_(journalist)" title="Robert Fulford (journalist)">Robert Fulford</a> wrote in 1999 that "Kensington today is as much a legend as a district. The (partly) outdoor market has probably been photographed more often than any other site in Toronto.</p>',
+						image: '<img height="100" src="http://upload.wikimedia.org/wikipedia/commons/0/0a/Pedestrian_Sunday_Kensington_Market.jpg">',
+						lat: '43.654343',
+						lng: '-79.400748',
+					},
+					{
+						name: '<h2>Maple Leaf Gardens</h2>',
+						description: '<p><b>Maple Leaf Gardens</b> is a historic building located at the northwest corner of <a href="http://en.wikipedia.org/wiki/Carlton_Street" title="Carlton Street" class="mw-redirect">Carlton Street</a> and <a href="http://en.wikipedia.org/wiki/Church_and_Wellesley" title="Church and Wellesley">Church Street</a> in <a href="http://en.wikipedia.org/wiki/Toronto" title="Toronto">Toronto</a>, <a href="http://en.wikipedia.org/wiki/Ontario" title="Ontario">Ontario</a>, <a href="http://en.wikipedia.org/wiki/Canada" title="Canada">Canada</a>. The building was initially constructed as an arena to host <a href="http://en.wikipedia.org/wiki/Ice_hockey" title="Ice hockey">ice hockey</a> games, but has since been reconstructed for other uses. Today Maple Leaf Gardens is a multipurpose facility, with <a href="http://en.wikipedia.org/wiki/Loblaws" title="Loblaws">Loblaws</a> occupying retail space on the lower floors and an athletic centre for Torontos <a href="http://en.wikipedia.org/wiki/Ryerson_University" title="Ryerson University">Ryerson University</a>, known as <b>Mattamy Athletic Centre at the Gardens</b>, occupying another level.</p>',
+						image: '<img height="100" src="http://upload.wikimedia.org/wikipedia/commons/3/30/Maple_Leaf_Gardens%2C_Toronto.jpg">',
+						lat: '43.661956',
+						lng: '-79.379702',
+					},
+					{
+						name: '<h2>Massey Hall</h2>',
+						description: '<p><b>Massey Hall</b> is a performing arts theatre in the <a href="http://en.wikipedia.org/wiki/Garden_District,_Toronto" title="Garden District, Toronto">Garden District</a> of downtown <a href="http://en.wikipedia.org/wiki/Toronto" title="Toronto">Toronto</a>. The theatre originally was designed to seat 3,500 patrons, but after extensive renovations in the 1940s it now seats up to 2,765.</p>',
+						image: '<img height="100" src="http://upload.wikimedia.org/wikipedia/commons/9/95/After_the_show_%281%29.jpg">',
+						lat: '43.654209',
+						lng: '-79.378865',
+					},
+					{
+						name: '<h2>Montgomerys Tavern</h2>',
+						description: '<p>The <b>Battle of Montgomerys Tavern</b> was an incident in the <a href="http://en.wikipedia.org/wiki/Upper_Canada_Rebellion" title="Upper Canada Rebellion">Upper Canada Rebellion</a>. The abortive revolutionary insurrection inspired by <a href="http://en.wikipedia.org/wiki/William_Lyon_Mackenzie" title="William Lyon Mackenzie">William Lyon Mackenzie</a> was crushed by <a href="http://en.wikipedia.org/wiki/United_Kingdom_of_Great_Britain_and_Ireland" title="United Kingdom of Great Britain and Ireland">British</a> authorities and <a href="http://en.wikipedia.org/wiki/Canada" title="Canada">Canadian</a> volunteer units near a tavern on <a href="http://en.wikipedia.org/wiki/Yonge_Street" title="Yonge Street">Yonge Street</a>, <a href="http://en.wikipedia.org/wiki/Toronto" title="Toronto">Toronto</a>.</p>',
+						image: '<img height="100" src="http://upload.wikimedia.org/wikipedia/commons/7/72/Montgomery%27s_Tavern.jpg">',
+						lat: '43.709573',
+						lng: '-79.399077',
+					},
+					{
+						name: '<h2>Mount Pleasant Cemetery</h2>',
+						description: '<p><b>Mount Pleasant Cemetery</b> is a <a href="http://en.wikipedia.org/wiki/Cemetery" title="Cemetery">cemetery</a> located in <a href="http://en.wikipedia.org/wiki/Toronto" title="Toronto">Toronto</a>, <a href="http://en.wikipedia.org/wiki/Ontario" title="Ontario">Ontario</a>, <a href="http://en.wikipedia.org/wiki/Canada" title="Canada">Canada</a>.</p> <p>In the early 19th century, the only authorized cemeteries within the city of Toronto (then known as York) were limited to the members of either the <a href="http://en.wikipedia.org/wiki/Roman_Catholic_Church" title="Roman Catholic Church" class="mw-redirect">Roman Catholic Church</a> or the <a href="http://en.wikipedia.org/wiki/Church_of_England" title="Church of England">Church of England</a>. Deceased citizens who did not belong to either of these Christian denominations had no choice but to find burial arrangements outside of the city. In 1873, a new cemetery available to all citizens was conceived. Originally a 200-acre farm, on the far outskirts of Toronto, Mount Pleasant Cemetery opened on November 4, 1876 with more than twelve miles of carriage drives along rolling hills and ponds. <a href="http://en.wikipedia.org/wiki/Mount_Pleasant_Road" title="Mount Pleasant Road">Mount Pleasant Road</a> was later constructed to pass through the centre of the cemetery and is named after this cemetery. With the growth in population, today the cemetery is located in the centre of the city. While the watercourses have since been filled in, the cemetery still has many miles of walking paths, interspersed with fountains, statues, botanical gardens, and rare and distinct trees.</p>',
+						image: '<img height="100" src="http://upload.wikimedia.org/wikipedia/commons/5/50/Mount_Pleasant_Cemetery%2C_Eaton%2C_Toronto_3121.JPG">',
+						lat: '43.696810',
+						lng: '-79.383091',
+					},
+					{
+						name: '<h2>Union Station</h2>',
+						description: '<p><b>Union Station</b> is the primary <a href="http://en.wikipedia.org/wiki/Railway_station" title="Railway station" class="mw-redirect">railway station</a> and intercity transportation facility in <a href="http://en.wikipedia.org/wiki/Toronto" title="Toronto">Toronto</a>, Canada. It is located on <a href="http://en.wikipedia.org/wiki/Front_Street_(Toronto)" title="Front Street (Toronto)">Front Street West</a>, on the south side of the block bounded by <a href="http://en.wikipedia.org/wiki/Bay_Street" title="Bay Street">Bay Street</a> and York Street in <a href="http://en.wikipedia.org/wiki/Downtown_Toronto" title="Downtown Toronto">downtown Toronto</a>. The station building is owned by the <a href="http://en.wikipedia.org/wiki/Municipal_government_of_Toronto" title="Municipal government of Toronto">City of Toronto</a>, while the <a href="http://en.wikipedia.org/wiki/Train_shed" title="Train shed">train shed</a> and trackage is owned by the commuter rail operator <a href="http://en.wikipedia.org/wiki/GO_Transit" title="GO Transit">GO Transit</a>. Union Station has been designated a <a href="http://en.wikipedia.org/wiki/National_Historic_Sites_of_Canada" title="National Historic Sites of Canada">National Historic Site of Canada</a> since 1975, and a <a href="http://en.wikipedia.org/wiki/Heritage_Railway_Stations_Protection_Act" title="Heritage Railway Stations Protection Act">Heritage Railway Station</a> since 1989.</p>',
+						image: '<img height="100" src="http://upload.wikimedia.org/wikipedia/commons/9/91/Union_Station_grand_hall.jpg">',
+						lat: '43.645327',
+						lng: '-79.380679',
+					},
+				];
+
+				var latlng = new google.maps.LatLng('43.6680', '-79.4000');
+				var mapOptions = {
+					center: latlng,
+					zoom: 13
+				};
+				var map = new google.maps.Map($('#map')[0], mapOptions);
+				torontopins.forEach(function(tdotpin) {
+
+					var latlng = new google.maps.LatLng(tdotpin.lat, tdotpin.lng);
+					var marker = new google.maps.Marker({
+						position: latlng,
+						map: map
+					});
+					var infowindow = new google.maps.InfoWindow({
+						content: tdotpin.name + tdotpin.image + tdotpin.description
+					});
+					google.maps.event.addListener(marker, 'click', function() {
+						map.setCenter(marker.position);
+						map.setZoom(12);
+						infowindow.open(map, marker);
+					});
+				});
+			});
+		</script>
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+	  .heading { width: 900px; display: block; text-align: center; margin-left: auto; margin-right: auto;}
+      #map { height: 100% }
+    </style>
+	</head>
+	<body>
+		<div class="heading"><h1>Toronto Landmarks</h1></div>
+		<div id="map"></div>
+	</body>
+</html>
+
