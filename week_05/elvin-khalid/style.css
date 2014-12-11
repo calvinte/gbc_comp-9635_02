@@ -1,0 +1,23 @@
+html{
+	height:100%;
+}
+body{
+	height: 100%;
+	padding:0;
+	margin: 0;
+}
+#map{
+	height:100%;
+}
+img{
+	width: 50%;
+	display: block;
+	margin: auto auto 10px auto;
+}
+.gm-style-iw{
+	background-color: tan;
+	color: white;
+	padding-left: 10px;
+	height: 400px;
+	width: 500px;
+}
