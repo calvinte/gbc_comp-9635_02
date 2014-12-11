@@ -1,0 +1,104 @@
+<!doctype HTML>
+	<head>
+	<title>Jocelyn's Childhood</title>
+	<script src = "//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src ="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9rABaf_KBbLEY9UI2wiwiOZ8SeFoAZBE&sensor=false"></script>
+		<style>
+			html {
+				height: 100%;
+			}
+			body {
+				height: 100%;
+				padding: 0;
+				margin: 0;
+			}
+			#map {
+				height: 100%;
+			}
+		</style>
+		<script>
+			$(function () {
+
+				var items = [
+					{
+						Lat: '42.288208',
+						Long: '-82.711108',
+						Name: '<h2>Belle River District High School</h2>',
+						Desc:'<p>On her first day of school, Jocelyn went into the boys washroom by mistake.</p>',
+						Image: '<img src="brdhs.jpg">',
+					},
+
+					{
+						Lat: '42.274961',
+						Long: '-83.002221',
+						Name: '<h2>Devonshire Mall</h2>',
+						Desc:"<p>Jocelyn's first job was scooping ice cream at Laura Secord's. She ate more than she scooped.</p>",
+						Image: '<img src="mall.jpg">',
+					},
+
+					{
+						Lat: '42.288746',
+						Long: '-82.700314',
+						Name: '<h2>Belle River Public School</h2>',
+						Desc: '<p>Jocelyn attended BRPS kindergarten through grade 8. She graduated just in time - her mom began teaching grade one there when Jocelyn moved down the street to the high school.</p>',
+						Image: '<img src="brps.jpg">',
+					},
+
+					{
+						Lat: '42.305133',
+						Long: '-83.067483',
+						Name: '<h2>University of Windsor</h2>',
+						Desc:'<p>U of W had so many commuters that Jocelyn could only ever find parking spaces under the bridge to Detroit.</p>',
+						Image: '<img src="uofwindsor.jpg">',
+					},
+
+					{
+						Lat: '42.312169',
+						Long: '-82.867043',
+						Name: '<h2>The Tecumseh Second Cup</h2>',
+						Desc:'<p>Jocelyn loved the White Hot Chocolate at Second Cup. The Second Cup was also next to the second most popular hangout spot in Tecumseh: the Blockbuster Video store.</p>',
+						Image: '<img src="second-cup.jpg">',
+					}
+
+
+
+				];
+
+				var LatLng = new google.maps.LatLng('42.256892','-82.920594')
+				var options = {
+					center: LatLng,
+					zoom: 11,
+
+				}
+			var map = new google.maps.Map($("#map")[0], options);
+
+			// 	for (var item in items){
+			// 	alert(items[item].Name);
+			// }
+
+			items.forEach(function (item){
+				var markerPt = new google.maps.LatLng(item.Lat,item.Long);
+
+				var marker = new google.maps.Marker({
+					position: markerPt, map:map});
+
+				var infoWindow = new google.maps.InfoWindow({ content: item.Name + item.Desc + item.Image });
+
+				google.maps.event.addListener(marker, 'click', function(){
+					
+					infoWindow.open(map,marker);
+					map.setCenter(marker.position);
+					map.setZoom(12);
+
+					
+				});
+
+				});
+		});
+
+		</script>
+	</head>
+	<body>
+		<div id="map"></div>
+	</body>
+</html>
