@@ -9,6 +9,7 @@ img{
 	display: block;
 	margin: 10px auto 10px auto;
 	border: 2px solid indigo;
+	border-radius: 10px;
 }
 h4{
 	background-color: indigo;
