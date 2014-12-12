@@ -1,0 +1,18 @@
+html, body, #google-map {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+h2{
+	color:tomato;
+	font-family: 'Courgette', cursive;
+	font-size:24px;
+	margin:0px;
+}
+h3{
+	color:#FFF;
+	background-color:tomato;
+	padding:6px;
+	margin:0px;
+}
