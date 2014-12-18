@@ -1,0 +1,19 @@
+html, body, #google-map{
+	height: 100%;
+	width:100%;
+	margin: 0;
+	padding: 0;
+}
+img{
+	width: 50%;
+	display: block;
+	margin: 10px auto 10px auto;
+	border: 2px solid indigo;
+	border-radius: 10px;
+}
+h4{
+	background-color: indigo;
+	color: #ffffff;
+	padding: 10px;
+	width: 30%;
+}
