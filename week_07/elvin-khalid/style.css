@@ -1,0 +1,79 @@
+html, body, #map-canvas {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+@font-face {
+    font-family: Triforce;
+    src: url(Triforce.ttf);
+}
+.instagram_image {
+	line-height: 0;	
+	overflow: hidden;
+}
+.user-info {
+	background: rgba(76, 167, 61, .6);
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	bottom: 0;
+	color: rgb(241,212,144);
+	height: 74px;
+	padding: 5px;
+	position: absolute;
+	width: 100%;
+}
+.user-info a {
+	color: inherit;
+	display: block;
+	height: 100%;
+	text-decoration: inherit;
+	position: relative;
+}
+.user-info .picture {
+	border-radius: 100%;
+	float: right;
+	height: 66%;
+	position: absolute;
+	right: 11px;
+	top: 18px;
+	z-index: 1200;
+}
+.user-info .name {
+	line-height: 64px;
+	font-family: Triforce;
+	text-transform: uppercase;
+	font-size: 18px;
+}
+.triangle-1{
+	width: 0;
+	height: 0;
+	border-left: 12.5px solid transparent;
+	border-right: 12.5px solid transparent;
+	border-bottom: 25px solid rgba(249,232,5,0.6);
+	position: absolute;
+	right: 20px;
+	top: -4px;
+}
+.triangle-2{
+	width: 0;
+	height: 0;
+	border-left: 12.5px solid transparent;
+	border-right: 12.5px solid transparent;
+	border-bottom: 25px solid rgba(249,232,5,0.6);
+	position: absolute;
+	right: 40px;
+	top: 40px;
+}
+.triangle-3{
+	width: 0;
+	height: 0;
+	border-left: 12.5px solid transparent;
+	border-right: 12.5px solid transparent;
+	border-bottom: 25px solid rgba(249,232,5,0.6);
+	position: absolute;
+	right: 2px;
+	top: 40px;
+}
+
+	
