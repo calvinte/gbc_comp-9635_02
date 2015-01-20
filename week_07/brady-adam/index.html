@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+<head>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9rABaf_KBbLEY9UI2wiwiOZ8SeFoAZBE&sensor=false"></script>
+		<script>
+			$(document).ready(function() {
+				var openInfoWindow, initiated;
+				var map = new google.maps.Map($('#map-canvas')[0], {
+					zoom: 16,
+				});
+								
+				navigator.geolocation.getCurrentPosition(function(position) {
+					var latlng = new google.maps.LatLng(
+						position.coords.latitude,
+						position.coords.longitude
+					);
+					searchPhotos(latlng);
+				});
+				var marker = new google.maps.Marker({
+					map: map,
+					draggable:true,
+					animation: google.maps.Animation.DROP,
+					icon: 'grey-pin-th.png',
+					zIndex: 9999
+
+				});
+				var debouncedSearch = _.debounce(function() { searchPhotos(marker.getPosition()) }, 400);
+				google.maps.event.addListener(marker,'position_changed',function(){
+					console.log(marker.getPosition());
+					debouncedSearch();
+				})
+				
+				function searchPhotos(latlng) {
+					map.setCenter(latlng);
+					if (!initiated) marker.setPosition(latlng);
+					$.ajax({
+						type: 'GET',
+						dataType: 'jsonp',
+						url: 'https://api.instagram.com/v1/media/search'
+							+ '?distance=100'
+							+ '&lat=' + latlng.lat()
+							+ '&lng=' + latlng.lng()
+							+ '&client_id=585d00be2af34a26b0e1caa6995cf19f',
+						success: function(response) {
+							console.log(response);
+							response.data.forEach(function(media) {
+								var latlng = new google.maps.LatLng(
+									media.location.latitude,
+									media.location.longitude
+								);
+								var marker = new google.maps.Marker({
+									position: latlng,
+									map: map,
+								});
+								var infowindow = new google.maps.InfoWindow({
+									content: ''
+										+ '<div class="insta-wrapper"><div class="insta-photo">'
+										+ '<a target="_blank" href="' + media.link + '">'
+										+ '<img src="' + media.images.low_resolution.url + '">'
+										+ '</a>'
+										+ '</div>'
+										+ '<div class="user-info">'
+										+ '<a target="_blank" href="http://instagram.com/' + media.user.username + '">'
+										+ '<span class="name">' + media.user.full_name + '</span>'
+										+ '<span class="caption">' + media.caption.text + '</span>'
+										+ '<img class="picture" src="' + media.user.profile_picture + '">'
+										+ '</a>'
+										+ '</div></div>'
+										,
+								});
+								google.maps.event.addListener(marker, 'click', function() {
+									if (openInfoWindow) openInfoWindow.close();
+									openInfoWindow = infowindow;
+									infowindow.open(map, marker);
+								});
+								
+							});
+						},
+					});
+					initiated = true;
+				}
+				
+			});
+		</script>		
+	<style type="text/css">
+	html, body, #map-canvas {
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	}
+		.insta-wrapper {
+			overflow: hidden;
+			height: 306px;
+			width: 300px;
+		}
+		.insta-photo {
+			line-height: 0;	
+			overflow: hidden;
+		}
+		.user-info {
+			background: rgba(0, 0, 0, .6);
+			box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			margin-top: 0px;
+			color: white;
+			height: 90px;
+			padding: 5px;
+			width: 306px;
+			overflow:hidden;
+			opacity:.7;
+			position: relative;
+			-webkit-transition: all 0.6s ease;
+			-moz-transition: all 0.6s ease;
+			-o-transition: all 0.6s ease;
+		}
+		.insta-wrapper:hover .user-info {
+			opacity:1;
+			margin-top: -90px;
+		}
+		.user-info a {
+			color: inherit;
+			display: block;
+			height: 100%;
+			text-decoration: inherit;
+			}
+		.user-info .picture {
+			border-radius: 100%;
+			height: 50px;
+			position: absolute;
+			left: 260px;
+			top: 0px;
+			z-index:0;
+		}
+		.user-info .name {
+			line-height: 40px;
+		}
+		.caption {
+			color: inherit;
+			display: block;
+			height: 100%;
+			text-decoration: inherit;
+			position:relative;
+			z-index:1;
+		}
+	</style>
+	</head>
+	<body>
+		<p> </p>
+		<div id="map-canvas"></div>
+	</body>
+</html>
